@@ -1,0 +1,102 @@
+body{
+	font-size: 16px;
+	margin: 0px auto;
+	/*Requerimiento del cliente*/
+	min-width: 1600px;
+	max-width: 1600px; /* esto permite que no se destroce el diceno al cambiar la resolucion */
+}
+section article input {
+        border-radius: 5px;
+}
+#persona {
+   width: 50%;
+   float: left;
+}
+
+#twt {
+    width: 15%;
+    float: left;
+}
+
+#s1 article{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#s1img {
+    background: #f1efef;
+    width: 15%;
+    padding: 78px ;
+}
+#s1ar1 {
+    padding: 150px 50px ;
+    width: 20%;
+    background: #f1efef;
+}
+
+#s1ar2 {
+    margin-right: 155px;
+    float: right;
+    padding: 140px 150px;
+    width: 20%;
+    background: #606060;
+
+}
+
+#s2 article{
+    display: inline-block;
+    vertical-align: middle;
+	text-align: center;
+}
+
+#s2ar1 {
+    background: #55aced;
+    width: 26%;
+}
+#s2ar2 {
+    background: #d1dccf;
+    width: 15%;
+}
+#s2ar3 {
+    background: #787777;
+    width: 22%;
+}
+
+#s2ar1{
+    color: white;
+}
+#s1ar1  input[type="button"]{
+	color: black;
+	background: #f1efef;
+}
+#s1ar2  input[type="button"]{
+	color: white;
+	background: #606060;
+}
+#s2ar2  input[type="button"]{
+	color: black;
+    background: #d1dccf;
+    border: 1px solid black;
+
+}
+#s2ar3  input[type="button"]{
+	color: white;
+    background: #787777;
+}
+
+.cblanco{
+	color: white;
+}
+.letragrande{
+	font-size: 2.5em;
+}
+.letramediana{
+	font-size: 1.5em;
+}
+.p1{
+    padding: 65px;
+}
+.p2{
+    padding: 75px;
+}
