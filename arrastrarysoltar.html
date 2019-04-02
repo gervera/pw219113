@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Arrastrar y Soltar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <h2>Arrastrar y Soltar</h2>
+    <div id="d1">
+        <img src="img/itc.png" height="31" width="88" draggable="true" ondragstart="drag(event)" id="a1">
+        <img src="img/itc.png" height="31" width="88" draggable="true" ondragstart="drag(event)" id="a2">
+        <img src="img/itc.png" height="31" width="88" draggable="true" ondragstart="drag(event)" id="a3">
+        <img src="img/itc.png" height="31" width="88" draggable="true" ondragstart="drag(event)" id="a4">
+    </div>
+    <div id="d2" ondragover="allowDrop(event)" ondrop="drop(event)">
+
+    </div>
+</body>
+</html>
