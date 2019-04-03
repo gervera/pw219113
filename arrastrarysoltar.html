@@ -7,17 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <script src="main.js"></script>
+    <style>
+        #d1, #d2{
+            float: left;
+            border: 1px solid black;
+            height: 170px;
+            margin: 10px;
+            padding: 10px;
+            width: 100px;
+        }
+    </style>
 </head>
 <body>
     <h2>Arrastrar y Soltar</h2>
-    <div id="d1">
-        <img src="img/itc.png" height="31" width="88" draggable="true" ondragstart="drag(event)" id="a1">
-        <img src="img/itc.png" height="31" width="88" draggable="true" ondragstart="drag(event)" id="a2">
-        <img src="img/itc.png" height="31" width="88" draggable="true" ondragstart="drag(event)" id="a3">
-        <img src="img/itc.png" height="31" width="88" draggable="true" ondragstart="drag(event)" id="a4">
+    <div id="d1" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <img src="img/logo.png" height="31" width="88" draggable="true" ondragstart="drag(event)" id="a1">
+        <img src="img/logo.png" height="31" width="88" draggable="true" ondragstart="drag(event)" id="a2">
+        <img src="img/logo.png" height="31" width="88" draggable="true" ondragstart="drag(event)" id="a3">
+        <img src="img/logo.png" height="31" width="88" draggable="true" ondragstart="drag(event)" id="a4">
+        
     </div>
     <div id="d2" ondragover="allowDrop(event)" ondrop="drop(event)">
-
     </div>
+
+    <script>
+
+        function drag(ev){
+            //guardar en un contenedor
+            ev.dataTransfer.setData("text",ev.target.id);
+        }
+
+        function allowDrop(ev){
+            //desactivamos el evento por defecto
+            //que no permite soltar el elemento en el receptor
+            ev.preventDefault();
+        }
+
+        function drop(ev){
+            ev.preventDefault();
+            //recuperamos el id del elemento que se esta arrastrando
+            //de dataTranfers
+            var data = ev.dataTransfer.getData("text");
+            //ev es el div2
+            //a traves del target tenemos acceso a appendChild
+            // apprendChild permite agrega elementos en tiempo de
+            //ejecicion a una caja, toma como paramentro el elemento
+            //que viene en camino.
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
 </body>
 </html>
+
+
